@@ -24,7 +24,7 @@ form.addEventListener("input", handlerInput);
 
 function handlerInput(event) {
   const name = event.target.name;
-  const value = event.target.value;
+  const value = event.target.value.trim();
 
   if (name in formData) {
     formData[name] = value;
@@ -44,7 +44,7 @@ function handlerSubmit(event) {
 
   console.log(formData);
 
-  localStorage.removeItem("feedback-form-state");
+  localStorage.removeItem(STORAGE_KEY);
 
   formData.email = "";
   formData.message = "";
