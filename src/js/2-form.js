@@ -44,7 +44,7 @@ function handlerSubmit(event) {
 
   console.log(formData);
 
-  localStorage.removeItem(STORAGE_KEY);
+  localStorage.removeItem("feedback-form-state");
 
   formData.email = "";
   formData.message = "";
